@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project 1 | 1Stop</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.0.0/font/bootstrap-icons.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.3/font/bootstrap-icons.min.css" integrity="sha512-dPXYcDub/aeb08c63jRq/k6GaKccl256JQy/AnOq7CAnEZ9FzSL9wSbcZkMp4R26vBsMLFYH4kQ67/bbV8XaCQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+<style>
+ul {
+  list-style-type: none;
+  margin: 8px;
+  padding: 8px;
+  overflow: hidden;
+  background-color: #01611c;
+}
+
+li {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: right;
+  padding: 14px 16px;
+  text-decoration: underline;
+}
+
+li a:hover {
+  background-color: #BDBDBD;
+}
+
+/*carousel*/
+/*<style>*/
+  .carousel-inner img {
+    width: 100%;
+    height: 100%;
+  }
+  .carousel {
+    width: 50%; /* Adjust the size of the carousel */
+    margin: auto;
+  }
+  .carousel-control-prev, .carousel-control-next {
+    width: 5%;
+  }
+  /*carousel*/
+
+h2 {
+  background-color: grey;
+  text-align: center;
+}
+
+/*Image Description*/
+
+.container {
+            display: flex;
+            height: 70vh;
+            align-items: stretch;
+            justify-content: center;
+        }
+        .image-container {
+            flex: 1;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 10px;
+        }
+        .image-container img {
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: cover;
+            aspect-ratio: 1 / 1;
+        }
+        .description-container {
+            flex: 2;
+            padding: 20px;
+        }
+
+/*Image Description*/
+
+
+/*Icons Description*/
+
+        .navbar {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: #f8f9fa;
+        }
+        .nav-item {
+            text-align: center;
+        }
+        .nav-item i {
+            font-size: 2rem; /* Default icon size */
+            color: #007bff; /* Default icon color */
+        }
+        .nav-item p {
+            margin-top: 5px;
+            font-size: 1rem; /* Default text size */
+            color: #212529; /* Default text color */
+        }
+
+/*Icons Description*/
+
+/*Profile part*/
+
+
+        .profile-card {
+            text-align: center;
+            padding: 15px;
+            margin: 15px;
+        }
+        .profile-card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10%;
+            object-fit: cover;
+        }
+        .social-icons i {
+            margin: 0 10px;
+            font-size: 1.5rem;
+            color: #555;
+        }
+        .social-icons i:hover {
+            color: #007bff;
+        }
+        .container-fluid {
+            padding: 30px;
+        }
+
+/*Profile Part*/
+
+/*Contact information*/
+
+
+        .container {
+            max-width: 1200px;
+            width: 100%;
+            height: 100%;
+        }
+        .contact-info, .contact-form {
+            padding: 20px;
+            background: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .contact-info h2, .contact-form h2 {
+            margin-bottom: 20px;
+        }
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+        }
+        .contact-form form .form-group {
+            margin-bottom: 15px;
+        }
+        .contact-form form .form-control {
+            border-radius: 4px;
+            padding: 10px;
+        }
+        .contact-form form button {
+            align-self: flex-end;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+/*Contact information*/
+
+/*About Company*/
+
+        .navbar {
+            background-color: #212529; /* Darker shade for navbar */
+            padding: 15px;
+        }
+        .navbar-brand img {
+            height: 50px;
+        }
+        .navbar-nav .nav-link {
+            color: #ffffff;
+            margin-right: 20px;
+            transition: color 0.3s;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #007bff; /* Change color on hover */
+        }
+        .company-info {
+            text-align: left;
+        }
+        .quick-links {
+            text-align: right;
+        }
+        .company-info p {
+            margin: 0;
+        }
+
+/*About Company*/
+</style>
+<!--</style>-->
+</head>
+<body>
+
+<ul>
+<img src="C:\Users\FAIZ AHMAD\Music\WebPic\w1.png" height="50" alt="Brand Logo">
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#news">News</a></li>
+  <li><a href="#contact">Contact</a></li>
+  <li><a href="#about">About</a></li>
+</ul>
+
+<!-- carousal -->
+<div id="imageCarousel" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+    <li data-target="#imageCarousel" data-slide-to="1"></li>
+    <li data-target="#imageCarousel" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="C:\Users\FAIZ AHMAD\OneDrive\Pictures\Screenshots\Screenshot (56).png" alt="Image1" style="aspect-ratio: 1 / 1;">
+    </div>
+    <div class="carousel-item">
+      <img src="C:\Users\FAIZ AHMAD\OneDrive\Pictures\Screenshots\Screenshot (55).png" alt="Image2" style="aspect-ratio: 1 / 1;">
+    </div>
+    <div class="carousel-item">
+      <img src="C:\Users\FAIZ AHMAD\OneDrive\Pictures\Screenshots\Screenshot (54).png" alt="Image3" style="aspect-ratio: 1 / 1;">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  // Activate Carousel
+  $("#imageCarousel").carousel();
+  
+  // Enable Carousel Controls
+  $(".carousel-control-prev").click(function(){
+    $("#imageCarousel").carousel("prev");
+  });
+  $(".carousel-control-next").click(function(){
+    $("#imageCarousel").carousel("next");
+  });
+});
+</script>
+<!--carousel-->
+
+<!--Description-->
+<br>
+<hr>
+<h2 id="great">Image Description</h2>
+<div class="container">
+        <div class="image-container">
+            <img src="C:\Users\FAIZ AHMAD\OneDrive\Pictures\Screenshots\Screenshot (49).png" alt="Tiger Image">
+        </div>
+        <div class="description-container">
+            <h1>Tiger</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lacinia odio vitae vestibulum vestibulum. Cras venenatis euismod malesuada. Sed sit amet semper dui, quis consequat nisl. Integer euismod, elit in pellentesque faucibus, urna metus pellentesque eros, eu viverra nulla mi sit amet dui. Phasellus aliquet purus non orci convallis, sed laoreet mi fermentum. Nam vitae justo ac arcu ultricies egestas. Fusce non mauris justo. Morbi elementum lectus at lorem dapibus, non aliquet purus fermentum. Ut a odio magna. Nam facilisis ultricies felis, non vehicula justo mollis nec. Maecenas non ligula sed dolor tincidunt tincidunt. Nullam non vehicula arcu. Proin ut tincidunt lorem. Aenean at tempor leo, sed vulputate tortor. Etiam sed tincidunt dui.</p>
+        </div>
+    </div>
+
+<!--Description-->
+
+<!--Icon Description-->
+
+<nav class="navbar">
+        <div class="nav-item">
+            <i class="bi bi-list"></i>
+            <p>Menu</p>
+        </div>
+        <div class="nav-item">
+            <i class="bi bi-shield-shaded"></i>
+            <p>Security</p>
+        </div>
+        <div class="nav-item">
+            <i class="bi bi-person"></i>
+            <p>Profile</p>
+        </div>
+    </nav>
+
+
+<script>
+        function setIconStyle(iconClass, size, color) {
+            const icons = document.querySelectorAll(iconClass);
+            icons.forEach(icon => {
+                icon.style.fontSize = size;
+                icon.style.color = color;
+            });
+        }
+
+        function setTextStyle(textClass, size, color) {
+            const texts = document.querySelectorAll(textClass);
+            texts.forEach(text => {
+                text.style.fontSize = size;
+                text.style.color = color;
+            });
+        }
+
+        // Example of how to change icon and text styles
+        setIconStyle('.nav-item i', '3rem', 'red');
+        setTextStyle('.nav-item p', '1.2rem', 'green');
+    </script>
+
+<!--Icon Description-->
+<br>
+<!--Profile person part-->
+
+
+    <div class="container-fluid">
+        <h2 class="text-center mb-5">Our Innovative Team</h2>
+        <div class="row justify-content-center">
+            <div class="col-md-3 profile-card">
+                <img src="C:\Users\FAIZ AHMAD\OneDrive\Pictures\Screenshots\Screenshot (47).png" alt="Team Member 1" class="img-fluid">
+                <h3>Team Member 1</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3 profile-card">
+                <img src="C:\Users\FAIZ AHMAD\OneDrive\Pictures\Screenshots\Screenshot (46).png" alt="Team Member 2" class="img-fluid">
+                <h3>Team Member 2</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+            <div class="col-md-3 profile-card">
+                <img src="C:\Users\FAIZ AHMAD\OneDrive\Pictures\Screenshots\Screenshot (54).png" alt="Team Member 3" class="img-fluid">
+                <h3>Team Member 3</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="bi bi-instagram"></i></a>
+                    <a href="#"><i class="bi bi-twitter"></i></a>
+                    <a href="#"><i class="bi bi-linkedin"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--Profile person part-->
+
+<!--Contact information-->
+
+
+    <div class="container">
+        <div class="row">
+            <!-- Contact Info -->
+            <div class="col-md-5 contact-info">
+                <h2>Here's our Contact Info</h2>
+                <p><strong>Our Email</strong><br>ahmad484faiz@gmail.com</p>
+                <p><strong>Our Phone No.</strong><br>+91 9060268704</p>
+                <p><strong>Our Address</strong><br>N. B. Road, Patna City<br>Patna 800008<br>Bihar</p>
+            </div>
+            <!-- Contact Form -->
+            <div class="col-md-7 contact-form">
+                <h2>You can also Write to Us</h2>
+                <form>
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="Enter Your Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Id</label>
+                        <input type="email" class="form-control" id="email" placeholder="Enter Your Email">
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="form-label">Enter Subject</label>
+                        <input type="text" class="form-control" id="subject" placeholder="Enter the subject">
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="form-label">Enter Message</label>
+                        <textarea class="form-control" id="message" rows="4" placeholder="Enter Your Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+<!--Contact information-->
+
+<!--Company detail-->
+
+
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <div class="company-info">
+                <a class="navbar-brand" href="#">
+                    <img src="C:\Users\FAIZ AHMAD\Music\WebPic\w1.png" alt="Company Logo">
+                </a>
+                <p>Tiger</p>
+                <p>Tagline or description about the company goes here.</p>
+            </div>
+            <div class="quick-links ml-auto">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+<!--Company detail-->
+
+<!--Bootstrap and jQuery part-->
+<script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js" integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.9/dist/umd/popper.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+</html>
+
+
